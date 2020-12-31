@@ -9,6 +9,8 @@ verify_ssl = true
 django = "*"
 pgcli = "==2.1.1"
 psycopg2-binary = "*"
+pre-commit = "*"
+install = "*"
 
 [requires]
 python_version = "3.8"
