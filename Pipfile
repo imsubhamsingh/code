@@ -11,6 +11,7 @@ pgcli = "==2.1.1"
 psycopg2-binary = "*"
 pre-commit = "*"
 install = "*"
+django-crispy-forms = "*"
 
 [requires]
 python_version = "3.8"
