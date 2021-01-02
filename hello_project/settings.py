@@ -125,10 +125,12 @@ USE_TZ = True
 STATIC_URL = "/static/"
 # location of static files in local
 # development.
-STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static'),]
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "static"),
+]
 
 # location of static files in production
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
 
 STATICFILES_FINDER = [
     "django.contrib.staticfiles.finders.FileSystemFinder",
@@ -138,18 +140,18 @@ STATICFILES_FINDER = [
 
 AUTH_USER_MODEL = "users.CustomUser"
 
-CRISPY_TEMPLATE_PACK = 'bootstrap4'
+CRISPY_TEMPLATE_PACK = "bootstrap4"
 
 # django-allauth config
 LOGIN_REDIRECT_URL = "home"
-ACCOUNT_LOGOUT_REDIRECT = 'home' # this will override LOGOUT_REDIRECT_URL
+ACCOUNT_LOGOUT_REDIRECT = "home"  # this will override LOGOUT_REDIRECT_URL
 
 SITE_ID = 1
 
 AUTHENTICATION_BACKENDS = (
-     # Needed to login by username in Django admin, regardless of `allauth`
+    # Needed to login by username in Django admin, regardless of `allauth`
     "django.contrib.auth.backends.ModelBackend",
-     # `allauth` specific authentication methods, such as login by e-mail
+    # `allauth` specific authentication methods, such as login by e-mail
     "allauth.account.auth_backends.AuthenticationBackend",
 )
 
@@ -157,6 +159,6 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 
 ACCOUNT_SIGNUP_PASSWORD_ENTER_TWICE = False
 ACCOUNT_USERNAME_REQUIRED = False
-ACCOUNT_AUTHENTICATION_METHOD = 'email' 
+ACCOUNT_AUTHENTICATION_METHOD = "email"
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_UNIQUE_EMAIL = True
