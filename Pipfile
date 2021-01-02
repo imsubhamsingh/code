@@ -12,6 +12,7 @@ psycopg2-binary = "*"
 pre-commit = "*"
 install = "*"
 django-crispy-forms = "*"
+django-allauth = "==0.41.0"
 
 [requires]
 python_version = "3.8"
