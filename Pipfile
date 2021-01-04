@@ -13,6 +13,7 @@ pre-commit = "*"
 install = "*"
 django-crispy-forms = "*"
 django-allauth = "==0.41.0"
+pillow = "==6.2.1"
 
 [requires]
 python_version = "3.8"

@@ -8,21 +8,25 @@ class Migration(migrations.Migration):
 
     initial = True
 
-    dependencies = [
-    ]
+    dependencies = []
 
     operations = [
         migrations.CreateModel(
-            name='Book',
+            name="Book",
             fields=[
-                ('id', models.UUIDField(default=uuid.uuid4, editable=False, primary_key=True, serialize=False)),
-                ('title', models.CharField(max_length=200)),
-                ('author', models.CharField(max_length=200)),
-                ('price', models.DecimalField(decimal_places=2, max_digits=6)),
+                (
+                    "id",
+                    models.UUIDField(
+                        default=uuid.uuid4,
+                        editable=False,
+                        primary_key=True,
+                        serialize=False,
+                    ),
+                ),
+                ("title", models.CharField(max_length=200)),
+                ("author", models.CharField(max_length=200)),
+                ("price", models.DecimalField(decimal_places=2, max_digits=6)),
             ],
-            options={
-                'verbose_name': 'Book',
-                'verbose_name_plural': 'Books',
-            },
-        ),
+            options={"verbose_name": "Book", "verbose_name_plural": "Books"},
+        )
     ]
