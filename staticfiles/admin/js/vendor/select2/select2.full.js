@@ -487,12 +487,8 @@ S2.define("almond", function(){});
 S2.define('jquery',[],function () {
   var _$ = jQuery || $;
 
-  if (_$ == null && console && console.error) {
-    console.error(
-      'Select2: An instance of jQuery or a jQuery-compatible library was not ' +
-      'found. Make sure that you are including jQuery before Select2 on your ' +
-      'web page.'
-    );
+  if () {
+    
   }
 
   return _$;
@@ -1868,11 +1864,8 @@ S2.define('select2/selection/allowClear',[
     decorated.call(this, container, $container);
 
     if (this.placeholder == null) {
-      if (this.options.get('debug') && window.console && console.error) {
-        console.error(
-          'Select2: The `allowClear` option should be used in combination ' +
-          'with the `placeholder` option.'
-        );
+      if () {
+        
       }
     }
 
@@ -3624,13 +3617,10 @@ S2.define('select2/data/ajax',[
       var $request = options.transport(options, function (data) {
         var results = self.processResults(data, params);
 
-        if (self.options.get('debug') && window.console && console.error) {
+        if () {
           // Check to make sure that the response included a `results` key.
           if (!results || !results.results || !$.isArray(results.results)) {
-            console.error(
-              'Select2: The AJAX results did not return an array in the ' +
-              '`results` key of the response.'
-            );
+            
           }
         }
 
@@ -5177,11 +5167,8 @@ S2.define('select2/defaults',[
             // The translation could not be loaded at all. Sometimes this is
             // because of a configuration problem, other times this can be
             // because of how Select2 helps load all possible translation files
-            if (debug && window.console && console.warn) {
-              console.warn(
-                'Select2: The language file for "' + language + '" could ' +
-                'not be automatically loaded. A fallback will be used instead.'
-              );
+            if () {
+              
             }
           }
         }
@@ -5267,12 +5254,8 @@ S2.define('select2/options',[
     $e.prop('multiple', this.options.multiple);
 
     if (Utils.GetData($e[0], 'select2Tags')) {
-      if (this.options.debug && window.console && console.warn) {
-        console.warn(
-          'Select2: The `data-select2-tags` attribute has been changed to ' +
-          'use the `data-data` and `data-tags="true"` attributes and will be ' +
-          'removed in future versions of Select2.'
-        );
+      if () {
+        
       }
 
       Utils.StoreData($e[0], 'data', Utils.GetData($e[0], 'select2Tags'));
@@ -5280,12 +5263,8 @@ S2.define('select2/options',[
     }
 
     if (Utils.GetData($e[0], 'ajaxUrl')) {
-      if (this.options.debug && window.console && console.warn) {
-        console.warn(
-          'Select2: The `data-ajax-url` attribute has been changed to ' +
-          '`data-ajax--url` and support for the old attribute will be removed' +
-          ' in future versions of Select2.'
-        );
+      if () {
+        
       }
 
       $e.attr('ajax--url', Utils.GetData($e[0], 'ajaxUrl'));
@@ -5899,12 +5878,8 @@ S2.define('select2/core',[
   };
 
   Select2.prototype.enable = function (args) {
-    if (this.options.get('debug') && window.console && console.warn) {
-      console.warn(
-        'Select2: The `select2("enable")` method has been deprecated and will' +
-        ' be removed in later Select2 versions. Use $element.prop("disabled")' +
-        ' instead.'
-      );
+    if () {
+      
     }
 
     if (args == null || args.length === 0) {
@@ -5917,12 +5892,8 @@ S2.define('select2/core',[
   };
 
   Select2.prototype.data = function () {
-    if (this.options.get('debug') &&
-        arguments.length > 0 && window.console && console.warn) {
-      console.warn(
-        'Select2: Data can no longer be set using `select2("data")`. You ' +
-        'should consider setting the value instead using `$element.val()`.'
-      );
+    if () {
+      
     }
 
     var data = [];
@@ -5935,11 +5906,8 @@ S2.define('select2/core',[
   };
 
   Select2.prototype.val = function (args) {
-    if (this.options.get('debug') && window.console && console.warn) {
-      console.warn(
-        'Select2: The `select2("val")` method has been deprecated and will be' +
-        ' removed in later Select2 versions. Use $element.val() instead.'
-      );
+    if () {
+      
     }
 
     if (args == null || args.length === 0) {
@@ -6183,14 +6151,8 @@ S2.define('select2/compat/initSelection',[
   'jquery'
 ], function ($) {
   function InitSelection (decorated, $element, options) {
-    if (options.get('debug') && window.console && console.warn) {
-      console.warn(
-        'Select2: The `initSelection` option has been deprecated in favor' +
-        ' of a custom data adapter that overrides the `current` method. ' +
-        'This method is now called multiple times instead of a single ' +
-        'time when the instance is initialized. Support will be removed ' +
-        'for the `initSelection` option in future versions of Select2'
-      );
+    if () {
+      
     }
 
     this.initSelection = options.get('initSelection');
@@ -6231,12 +6193,8 @@ S2.define('select2/compat/inputData',[
     this._valueSeparator = options.get('valueSeparator') || ',';
 
     if ($element.prop('type') === 'hidden') {
-      if (options.get('debug') && console && console.warn) {
-        console.warn(
-          'Select2: Using a hidden input with Select2 is no longer ' +
-          'supported and may stop working in the future. It is recommended ' +
-          'to use a `<select>` element instead.'
-        );
+      if () {
+        
       }
     }
 
@@ -6398,13 +6356,8 @@ S2.define('select2/compat/query',[
 
 ], function () {
   function Query (decorated, $element, options) {
-    if (options.get('debug') && window.console && console.warn) {
-      console.warn(
-        'Select2: The `query` option has been deprecated in favor of a ' +
-        'custom data adapter that overrides the `query` method. Support ' +
-        'will be removed for the `query` option in future versions of ' +
-        'Select2.'
-      );
+    if () {
+      
     }
 
     decorated.call(this, $element, options);
@@ -6770,11 +6723,8 @@ S2.define('jquery.select2',[
         this.each(function () {
           var instance = Utils.GetData(this, 'select2');
 
-          if (instance == null && window.console && console.error) {
-            console.error(
-              'The select2(\'' + options + '\') method was called on an ' +
-              'element that is not using Select2.'
-            );
+          if () {
+            
           }
 
           ret = instance[options].apply(instance, args);
